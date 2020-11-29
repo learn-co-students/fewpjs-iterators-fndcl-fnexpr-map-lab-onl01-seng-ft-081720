@@ -12,5 +12,8 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const capitalize = tutorials.map(function (tutorial) {
+    return tutorial.replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())));
+  })
+  return capitalize
 }
